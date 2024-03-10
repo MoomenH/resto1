@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinner Ticket Reservation</title>
+<style>
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dinner Ticket Reservation</h1>
+    
+    <div class="menu">
+        <h2>Menu</h2>
+        <p>This is where the menu fetched from the database will be displayed.</p>
+    </div>
+    
+    <button id="reserveBtn" class="btn" disabled>Reserve Tickets</button>
+    <p id="message"></p>
+</div>
+
+<div class="footer">
+    Contact Information | Social Media Links
+</div>
+
+<script>
+// JavaScript for button click handling
+document.addEventListener('DOMContentLoaded', function() {
+    const reserveBtn = document.getElementById('reserveBtn');
+    const message = document.getElementById('message');
+    
+    // Get current time
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+    
+    // Check if current time is between 2pm and 12am
+    if (currentHour >= 14 && currentHour < 24) {
+        reserveBtn.disabled = false; // Enable the button
+        message.textContent = "You can reserve tickets now."; // Display message
+    } else {
+        reserveBtn.disabled = true; // Disable the button
+        message.textContent = "Ticket reservations are only available between 2pm and 12am."; // Display message
+    }
+    
+    // Button click handling
+    reserveBtn.addEventListener('click', function() {
+        message.style.display = "block"; // Keep the message displayed
+        message.textContent = "Reservation successful!"; // Update message
+        // You can perform reservation-related actions here
+    });
+});
+</script>
+</body>
+</html>

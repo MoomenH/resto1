@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body{background-color: #f9f9f9;}
+/* Additional CSS for submit buttons and message */
+.menu-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.menu-item textarea {
+  width: calc(100% - 100px); /* Adjust the width of the textarea */
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add border radius */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.menu-item button {
+  width: 100px; /* Set the width of the button */
+  height: 40px; /* Set the height of the button */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+/* Message styling */
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  padding: 20px;
+  border-radius: 5px; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+  z-index: 999; /* Ensure it's on top of other elements */
+}
+
+    </style>
+</head>
+<body>
+      <nav class="navbar">
+          <div class="navdiv">
+            <div class="logo"><a href="index2.html">Fattarni</a></div>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="Add-menu.html">Add menu</a></li>
+              <li><a href="about.html">About</a></li>             
+              <button><a href="signout.html">SignOut</a></button>
+
+            </ul>
+          </div>
+        </nav>
+      <br><br><br><br><br>
+      <section id="tomorrow-menu" class="menu-section">
+          <div class="container">
+              <h2>Tomorrow's Menu</h2>
+              <div class="menu-item">
+                  <textarea id="tomorrow-menu-description" placeholder="Enter menu description"></textarea>
+                  <button id="submit-tomorrow-menu">Submit</button>
+              </div>
+          </div>
+      </section>
+
+  <div class="fill">
+    <h2>Contact Us</h2>
+<p>If you have any questions or need assistance, feel free to contact us:</p>
+<ul>
+    <li>Email: Fattarni@gmail.com</li>
+    <li>Phone: +216 97047135</li>
+    <li>Address: Bizert,Bizert</li>
+</ul>
+<p>Follow us on social media:</p>
+<ul>
+    <li><a href="#"><img class="icon" src="facebook.png" alt="">Facebook</a></li>
+    <li><a href="#"><img class="icon" src="twitter.png" alt="">X</a></li>
+    <li><a href="#"><img class="icon" src="instagram.png" alt="">Instagram</a></li>
+</ul>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
